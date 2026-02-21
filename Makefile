@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -Iinclude -g -O2
 SRCS = src/main.c src/util.c src/lexer.c src/parser.c src/ast_dump.c src/codegen.c
 OBJS = $(SRCS:.c=.o)
-TARGET = cmc
+TARGET = naznc
 
 all: $(TARGET)
 
