@@ -1,0 +1,36 @@
+// Hello world test
+extern fn puts(s: *u8) -> i32
+extern fn printf(fmt: *u8, ...) -> i32
+extern fn exit(code: i32) -> void
+
+global fn add(a: i64, b: i64) -> i64 {
+    return a + b
+}
+
+global fn factorial(n: i64) -> i64 {
+    if n <= 1 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+global fn main() -> i32 {
+    puts(c"Hello, World!")
+
+    var x: i64 = add(3, 4)
+    var f: i64 = factorial(10)
+
+    // for range loop
+    for i in 0 .. 5 {
+        printf(c"i = %lld\n", i)
+    }
+
+    // while loop
+    var count: i64 = 0
+    while count < 3 {
+        printf(c"count = %lld\n", count)
+        count = count + 1
+    }
+
+    return 0
+}
